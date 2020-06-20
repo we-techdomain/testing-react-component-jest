@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import Warning from './Warning';
 
 class App extends Component{
   state = {
@@ -16,7 +17,7 @@ class App extends Component{
     return (
       <Fragment>
         { 
-          warning ? <div data-testid="warning-text">This is warning text</div> : null
+          warning ? <Warning/> : null
         }
         <button data-testid="warning-button" onClick={this.showWarning}>Show Warning</button>
       </Fragment>
